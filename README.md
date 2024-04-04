@@ -14,3 +14,6 @@ pip install gym
 ```
 pip install tqdm
 ```
+
+## About LunarLander
+In the LunarLander environment, we control a lander that is entering the atmosphere of the moon. It starts at a random location in the horizon, our goal is to safely land the lander to a designated landing pad. The lander has three rockets, one to the left of the lander, one to the right, and one in the middle. The lander has infinite rocket fuel. The observation space of the environment is a 8-dimensional vector which has the x,y coordinates of the lander, the linear velocities of the lander in the x and y directions, the angle of the lander with respect to the ground, the lander's angular velocity and boolen values to represent whether the ladner's left and right legs are touching the ground. The lander can take four discrete actions: do nothing, fire the left rocket, fire the middle rocket, fire the right rocket. If the lander, crashes it receives a reward of -100, however, if it safely comes to rest, it receives a reward of +100 and a reward of +10 for each leg that is in contact with the ground. There is a minimal cost for firing each of the rockets, -0.3 for the main engine and -0.03 for firing the side engines. The episode terminates if the lander crashes, or the lander goes out of frame or if the lander is still, ie lands.  
